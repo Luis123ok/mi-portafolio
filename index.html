@@ -217,24 +217,58 @@
     <div class="section-head">
       <p class="eyebrow">TABLA_04 · avances_curso</p>
       <h2>Avances del curso</h2>
-      <p class="section-sub">Evidencias visuales de las prácticas realizadas durante el ciclo.</p>
+      <p class="section-sub">Proceso completo detrás del artículo: configuración del clúster, generación de datos y benchmarks de Hadoop, Spark y Flink.</p>
     </div>
 
-    <div class="gallery" id="gallery">
-      <button class="gallery-item" data-full="assets/avance-1.webp">
-        <img src="assets/avance-1.webp" alt="Avance de práctica: sitio Big Data 4to ciclo" loading="lazy">
-        <span class="gallery-caption">Sitio del curso · Big Data 4°</span>
+    <h3 class="group-title">Entorno y configuración</h3>
+    <div class="gallery">
+      <button class="gallery-item is-empty" data-caption="Versiones de Java y Hadoop instaladas">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Versiones de Java y Hadoop</span>
       </button>
-      <button class="gallery-item" data-full="assets/avance-2.webp">
-        <img src="assets/avance-2.webp" alt="Avance de práctica: Microsoft Learn" loading="lazy">
-        <span class="gallery-caption">Catálogo · Microsoft Learn</span>
+      <button class="gallery-item is-empty" data-caption="Versión de Apache Spark instalada">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Versión de Spark</span>
       </button>
-      <div class="gallery-item is-empty">
-        <span class="gallery-plus">+</span>
-        <span class="gallery-caption">Tu próxima captura aquí</span>
-      </div>
+      <button class="gallery-item is-empty" data-caption="Versión de Flink, Python 3 y sistema operativo">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Flink, Python 3 y S.O.</span>
+      </button>
+      <button class="gallery-item is-empty" data-caption="Variables de entorno configuradas">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Variables de entorno</span>
+      </button>
+      <button class="gallery-item is-empty" data-caption="Configuración de core-site.xml">
+        <span class="gallery-plus">+</span><span class="gallery-caption">core-site.xml</span>
+      </button>
+      <button class="gallery-item is-empty" data-caption="Configuración de hdfs-site.xml">
+        <span class="gallery-plus">+</span><span class="gallery-caption">hdfs-site.xml</span>
+      </button>
+      <button class="gallery-item is-empty" data-caption="Configuración de mapred-site.xml">
+        <span class="gallery-plus">+</span><span class="gallery-caption">mapred-site.xml</span>
+      </button>
     </div>
-    <p class="gallery-hint">Pásame tus próximas capturas y las voy agregando aquí, en orden.</p>
+
+    <h3 class="group-title">Generación de datos de prueba</h3>
+    <div class="gallery">
+      <button class="gallery-item is-empty" data-caption="Generación de dataset de prueba de 500 MB">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Dataset de 500 MB</span>
+      </button>
+      <button class="gallery-item is-empty" data-caption="Generación de dataset de prueba de 2 GB">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Dataset de 2 GB</span>
+      </button>
+    </div>
+
+    <h3 class="group-title">Ejecución y resultados</h3>
+    <div class="gallery">
+      <button class="gallery-item is-empty" data-caption="Procesos de Hadoop y Flink en ejecución">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Procesos Hadoop y Flink</span>
+      </button>
+      <button class="gallery-item is-empty" data-caption="Ejecución del benchmark comparativo">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Ejecución del benchmark</span>
+      </button>
+      <button class="gallery-item is-empty" data-caption="Resultados finales del benchmark">
+        <span class="gallery-plus">+</span><span class="gallery-caption">Resultados del benchmark</span>
+      </button>
+    </div>
+
+    <p class="gallery-hint">Sube las 12 capturas reales de tu carpeta y las acomodo una por una en su casillero.</p>
   </section>
 
 </main>
@@ -248,7 +282,12 @@
 <!-- ============ LIGHTBOX ============ -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
-  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+  <div class="lightbox-body">
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">›</button>
 </div>
 
 <script src="script.js"></script>
